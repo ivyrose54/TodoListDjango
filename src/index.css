@@ -1,0 +1,109 @@
+/* General styles */
+:root {
+  --background-color: #f4f4f4;
+  --text-color: #000;
+  --container-background-color: #fff;
+  --button-background-color: #007bff;
+  --button-hover-background-color: #0056b3;
+  --completed-text-color: #a0a0a0; /* Light mode completed text color */
+}
+
+[data-theme="dark"] {
+  --background-color: #2e2e2e;
+  --text-color: #e0e0e0;
+  --container-background-color: #3c3c3c;
+  --button-background-color: #4a90e2;
+  --button-hover-background-color: #357ab8;
+  --completed-text-color: #d3d3d3; /* Dark mode completed text color */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--container-background-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--button-background-color);
+  color: white;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+/* Task list styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: var(--completed-text-color);
+  transition: color 0.3s ease;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+li span {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+li button {
+  margin-left: 10px;
+}
+
+/* Filter button styles */
+.filter-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filter-buttons button {
+  background-color: var(--button-background-color);
+}
